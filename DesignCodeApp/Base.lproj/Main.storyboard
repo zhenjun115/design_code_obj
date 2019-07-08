@@ -251,6 +251,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEf-X9-JJk">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <state key="normal" image="Action-Play-Small"/>
+                                                            <connections>
+                                                                <action selector="handlePlatBtnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZ4-qE-SlF"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -303,11 +306,26 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9u-0v-OFS">
                                                 <rect key="frame" x="20" y="82" width="304" height="248"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmt-hQ-nzn">
+                                                        <rect key="frame" x="17" y="34" width="46" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="handleTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0v-hc-635"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="248" id="XuS-M4-ssn"/>
                                                     <constraint firstAttribute="width" constant="304" id="onp-Qd-lPe"/>
                                                 </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znR-7R-e7D">
+                                                <rect key="frame" x="20" y="349" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -348,9 +366,33 @@
                         <viewLayoutGuide key="safeArea" id="Y5D-A2-qc9"/>
                     </view>
                     <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="backgroundImg" destination="up1-Dn-b4A" id="6re-Uu-hHF"/>
+                        <outlet property="bookView" destination="IsD-oI-IFQ" id="DHn-So-x39"/>
+                        <outlet property="deviceImage" destination="7oh-I6-bV9" id="EP4-B8-Wga"/>
+                        <outlet property="heroView" destination="Lnn-uE-54x" id="agp-07-pG0"/>
+                        <outlet property="playVisualView" destination="Z00-pm-Zp4" id="0g4-Ud-L2z"/>
+                        <outlet property="scrollView" destination="UMb-ze-3Pt" id="xGy-cb-vkF"/>
+                        <outlet property="titleLabel" destination="7eq-m0-KkZ" id="3W3-nA-sH2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Section View Controller-->
+        <scene sceneID="v5R-jD-feO">
+            <objects>
+                <viewController id="MnC-aD-CFs" customClass="SectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pd6-ot-svf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fve-S8-xM6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHC-1d-i5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="-417"/>
         </scene>
     </scenes>
     <resources>
