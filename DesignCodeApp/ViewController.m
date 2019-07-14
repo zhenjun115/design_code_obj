@@ -23,6 +23,8 @@
     // self.playVisualView.alpha = 0;
     
     self.scrollView.delegate = self;
+    self.chapterCollectionView.delegate = self;
+    self.chapterCollectionView.dataSource = self;
     
     // 初始化一个动画对象
     /*CABasicAnimation *animation = [CABasicAnimation animation];
@@ -95,4 +97,13 @@
         self.backgroundImg.transform = transformSlow;
     }
 }
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    NSString *reuseIdentifier = @"sectionCell";
+    return [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 3;
+}
+
 @end

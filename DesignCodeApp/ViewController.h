@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVKit/AVKit.h>
 
-@interface ViewController : UIViewController<UIScrollViewDelegate>
+@interface ViewController : UIViewController<UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *deviceImage;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *playVisualView;
@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *bookView;
 @property (weak, nonatomic) IBOutlet UIView *heroView;
+@property (weak, nonatomic) IBOutlet UICollectionView *chapterCollectionView;
 
 @end
 
