@@ -18,14 +18,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.titleLabel.alpha = 0;
-    self.deviceImage.alpha = 0;
-    self.playVisualView.alpha = 0;
+    // self.titleLabel.alpha = 0;
+    // self.deviceImage.alpha = 0;
+    // self.playVisualView.alpha = 0;
     
-    // self.scrollView.delegate = self;
+    self.scrollView.delegate = self;
     
     // 初始化一个动画对象
-    CABasicAnimation *animation = [CABasicAnimation animation];
+    /*CABasicAnimation *animation = [CABasicAnimation animation];
     animation.keyPath = @"opacity";
     animation.toValue = @1;
     animation.duration = 3;
@@ -35,7 +35,7 @@
     
     [self.titleLabel.layer addAnimation:animation forKey:@"basic"];
     [self.deviceImage.layer addAnimation:animation forKey:@"basic"];
-    [self.playVisualView.layer addAnimation:animation forKey:@"basic"];
+    [self.playVisualView.layer addAnimation:animation forKey:@"basic"];*/
     
     // TODO: 没有起作用
     // self.titleLabel.layer.position = CGPointMake(455, 61);
@@ -79,5 +79,20 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog( @"scroll view!!" );
+    NSLog( @"scolll offset y: %f", scrollView.contentOffset.y );
+    NSLog( @"scroll view end!!" );
+    
+    float offsetY = scrollView.contentOffset.y;
+    
+    if(offsetY < 0) {
+        CGAffineTransform transformFast = CGAffineTransformMakeTranslation( 0, offsetY );
+        CGAffineTransform transformMedium = CGAffineTransformMakeTranslation( 0, offsetY /3 );
+        CGAffineTransform transformSlow = CGAffineTransformMakeTranslation( 0, offsetY / 5 );
+        
+        self.heroView.transform = transformFast;
+        self.bookView.transform = transformMedium;
+        self.titleLabel.transform = transformSlow;
+        self.backgroundImg.transform = transformSlow;
+    }
 }
 @end

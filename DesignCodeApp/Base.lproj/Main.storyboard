@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wave14" translatesAutoresizingMaskIntoConstraints="NO" id="up1-Dn-b4A">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
+                                                        <rect key="frame" x="0.0" y="-50" width="375" height="502"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn to design &amp; code for iOS 11" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eq-m0-KkZ">
                                                         <rect key="frame" x="30" y="86" width="160" height="172"/>
@@ -244,7 +244,7 @@
                                                     <constraint firstItem="7eq-m0-KkZ" firstAttribute="centerX" secondItem="Lnn-uE-54x" secondAttribute="centerX" constant="-77.5" id="OP1-UX-k98"/>
                                                     <constraint firstItem="7eq-m0-KkZ" firstAttribute="centerY" secondItem="Lnn-uE-54x" secondAttribute="centerY" constant="-54" id="R6H-T6-hqO"/>
                                                     <constraint firstItem="7eq-m0-KkZ" firstAttribute="centerX" secondItem="Lnn-uE-54x" secondAttribute="centerX" constant="-77.5" id="S23-TH-fzn"/>
-                                                    <constraint firstItem="up1-Dn-b4A" firstAttribute="top" secondItem="Lnn-uE-54x" secondAttribute="top" id="g5f-Zh-q8m"/>
+                                                    <constraint firstItem="up1-Dn-b4A" firstAttribute="top" secondItem="Lnn-uE-54x" secondAttribute="top" constant="-50" id="g5f-Zh-q8m"/>
                                                     <constraint firstItem="Z00-pm-Zp4" firstAttribute="centerY" secondItem="7oh-I6-bV9" secondAttribute="centerY" constant="-11.5" id="jRz-Bh-70q"/>
                                                     <constraint firstItem="7oh-I6-bV9" firstAttribute="centerY" secondItem="7eq-m0-KkZ" secondAttribute="centerY" constant="12.5" id="ltH-Zd-XK2"/>
                                                     <constraint firstItem="ie8-Yy-IbU" firstAttribute="leading" secondItem="Lnn-uE-54x" secondAttribute="leading" id="m7x-nP-mXP"/>
