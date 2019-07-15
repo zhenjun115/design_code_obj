@@ -7,10 +7,8 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "Data.h"
+#import "SectionCollectionViewCell.h"
 
 @implementation ViewController
 
@@ -25,6 +23,9 @@
     self.scrollView.delegate = self;
     self.chapterCollectionView.delegate = self;
     self.chapterCollectionView.dataSource = self;
+    
+    Data *data = [[Data alloc] init];
+    self.dictArray = data.dictArray;
     
     // 初始化一个动画对象
     /*CABasicAnimation *animation = [CABasicAnimation animation];
@@ -99,11 +100,19 @@
 }
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSString *reuseIdentifier = @"sectionCell";
-    return [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    SectionCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    NSDictionary *section = self.dictArray[indexPath.row];
+    
+    cell.topTitleLabel.text = section[@"title"];
+    cell.bottomDescLabel.text = section[@"caption"];
+    cell.cellBackImg.image = [UIImage imageNamed:section[@"image"]];
+    
+    return cell;
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 3;
+    return self.dictArray.count;
 }
 
 @end

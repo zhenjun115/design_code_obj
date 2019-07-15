@@ -323,7 +323,7 @@
                                                             <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="8nF-mN-7oD">
+                                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="8nF-mN-7oD" customClass="SectionCollectionViewCell">
                                                                 <rect key="frame" x="20" y="0.0" width="304" height="248"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -386,6 +386,11 @@
                                                                     <constraint firstAttribute="trailingMargin" secondItem="GbB-ch-crd" secondAttribute="trailing" id="p03-l2-I9j"/>
                                                                 </constraints>
                                                                 <size key="customSize" width="304" height="248"/>
+                                                                <connections>
+                                                                    <outlet property="bottomDescLabel" destination="qUL-tv-6YU" id="B6V-h0-12u"/>
+                                                                    <outlet property="cellBackImg" destination="zM2-g3-4xL" id="i1A-32-hPq"/>
+                                                                    <outlet property="topTitleLabel" destination="LMY-sk-mpA" id="Vvb-Vj-bZX"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>

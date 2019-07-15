@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SectionViewController : UIViewController
+@interface SectionViewController : UIViewController {
+    NSArray *array;
+}
 
 @end
 

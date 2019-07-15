@@ -23,5 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *heroView;
 @property (weak, nonatomic) IBOutlet UICollectionView *chapterCollectionView;
 
+@property NSArray *dictArray;
+
 @end
 
