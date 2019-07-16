@@ -81,11 +81,12 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog( @"scroll view!!" );
-    NSLog( @"scolll offset y: %f", scrollView.contentOffset.y );
-    NSLog( @"scroll view end!!" );
+    // NSLog( @"scroll view!!" );
+    // NSLog( @"scolll offset y: %f", scrollView.contentOffset.y );
+    // NSLog( @"scroll view end!!" );
     
     float offsetY = scrollView.contentOffset.y;
+    float offsetX = scrollView.contentOffset.x;
     
     if(offsetY < 0) {
         CGAffineTransform transformFast = CGAffineTransformMakeTranslation( 0, offsetY );
@@ -96,6 +97,31 @@
         self.bookView.transform = transformMedium;
         self.titleLabel.transform = transformSlow;
         self.backgroundImg.transform = transformSlow;
+    }
+    
+    // 水平滚动
+    if([scrollView isMemberOfClass:[UICollectionView class]]){
+        // NSLog(@"uicollection view!!");
+        NSLog( @"ui collection view %lu", [self.chapterCollectionView.visibleCells count] );
+        for( int i = 0; i < [self.chapterCollectionView.visibleCells count]; i++ ) {
+            if( [self.chapterCollectionView.visibleCells[i] isMemberOfClass:[SectionCollectionViewCell class]]) {
+                // NSLog(@"collection cell view!!");
+                // 获取节点
+                NSIndexPath *forIndexPath = [ self.chapterCollectionView indexPathForCell:self.chapterCollectionView.visibleCells[i] ];
+                
+                // 获取可见卡片的属性
+                // UICollectionViewLayoutAttributes *attrs = [self.chapterCollectionView layoutAttributesForItemAtIndexPath: forIndexPath];
+                
+                // 3d 动画
+                SectionCollectionViewCell *cell = self.chapterCollectionView.visibleCells[i];
+                CGAffineTransform transform = CGAffineTransformMakeTranslation( offsetX / 5, 0 );
+                cell.cellBackImg.transform = transform;
+                
+                // CGAffineTransform *transform = CGAffineTransformMakeTranslation(<#CGFloat tx#>, <#CGFloat ty#>)
+                // cell.layer.transform = CATransform3DRotate( transform, offsetX * 3.14159265 / 180, 0, 1, 0 );
+                // break;
+            }
+        }
     }
 }
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {

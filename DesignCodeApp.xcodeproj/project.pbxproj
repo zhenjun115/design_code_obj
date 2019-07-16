@@ -18,6 +18,8 @@
 		94C6189C22C4B9C0002BC0D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C6189B22C4B9C0002BC0D7 /* main.m */; };
 		94C618A622C4B9C0002BC0D7 /* DesignCodeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C618A522C4B9C0002BC0D7 /* DesignCodeAppTests.m */; };
 		94C618B122C4B9C0002BC0D7 /* DesignCodeAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C618B022C4B9C0002BC0D7 /* DesignCodeAppUITests.m */; };
+		94D262FA22DDB55100CED925 /* TestimonialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D262F922DDB55100CED925 /* TestimonialViewController.m */; };
+		94D262FD22DDB9BD00CED925 /* TestimonialCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D262FC22DDB9BD00CED925 /* TestimonialCollectionViewCell.m */; };
 		94D28FB422D2E054002B54DA /* SectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D28FB322D2E054002B54DA /* SectionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,10 @@
 		94C618AC22C4B9C0002BC0D7 /* DesignCodeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignCodeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C618B022C4B9C0002BC0D7 /* DesignCodeAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignCodeAppUITests.m; sourceTree = "<group>"; };
 		94C618B222C4B9C0002BC0D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D262F822DDB55100CED925 /* TestimonialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestimonialViewController.h; sourceTree = "<group>"; };
+		94D262F922DDB55100CED925 /* TestimonialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestimonialViewController.m; sourceTree = "<group>"; };
+		94D262FB22DDB9BD00CED925 /* TestimonialCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestimonialCollectionViewCell.h; sourceTree = "<group>"; };
+		94D262FC22DDB9BD00CED925 /* TestimonialCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestimonialCollectionViewCell.m; sourceTree = "<group>"; };
 		94D28FB222D2E054002B54DA /* SectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectionViewController.h; sourceTree = "<group>"; };
 		94D28FB322D2E054002B54DA /* SectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				94C6188922C4B9C0002BC0D7 /* AppDelegate.h */,
+				94D262F822DDB55100CED925 /* TestimonialViewController.h */,
+				94D262F922DDB55100CED925 /* TestimonialViewController.m */,
+				94D262FB22DDB9BD00CED925 /* TestimonialCollectionViewCell.h */,
+				94D262FC22DDB9BD00CED925 /* TestimonialCollectionViewCell.m */,
 				9489661E22DB5366007CC62C /* Data.h */,
 				9489661F22DB5366007CC62C /* Data.m */,
 				94C6188A22C4B9C0002BC0D7 /* AppDelegate.m */,
@@ -281,11 +291,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				94C6188E22C4B9C0002BC0D7 /* ViewController.m in Sources */,
+				94D262FD22DDB9BD00CED925 /* TestimonialCollectionViewCell.m in Sources */,
 				94C6188B22C4B9C0002BC0D7 /* AppDelegate.m in Sources */,
 				94C6189C22C4B9C0002BC0D7 /* main.m in Sources */,
 				94C6189422C4B9C0002BC0D7 /* DesignCodeApp.xcdatamodeld in Sources */,
 				9489662022DB5366007CC62C /* Data.m in Sources */,
 				9489661D22DB4BB6007CC62C /* SectionCollectionViewCell.m in Sources */,
+				94D262FA22DDB55100CED925 /* TestimonialViewController.m in Sources */,
 				94D28FB422D2E054002B54DA /* SectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
