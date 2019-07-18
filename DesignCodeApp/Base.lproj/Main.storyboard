@@ -545,23 +545,23 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PXh-Rm-I7R">
-                                                                    <rect key="frame" x="200.66666666666666" y="172" width="67.333333333333343" height="41"/>
+                                                                    <rect key="frame" x="54" y="172" width="214" height="41"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-ab-d2M">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="214" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRD-gu-0hZ">
-                                                                            <rect key="frame" x="0.0" y="23" width="67.333333333333329" height="18"/>
+                                                                            <rect key="frame" x="0.0" y="23" width="214" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0QC-df-xJS">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-chris-ching" translatesAutoresizingMaskIntoConstraints="NO" id="0QC-df-xJS">
                                                                     <rect key="frame" x="20" y="180.66666666666666" width="24" height="24"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="24" id="HNT-le-HcC"/>
@@ -577,12 +577,13 @@
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="Vyg-SE-Qj2" firstAttribute="top" secondItem="moD-2H-SCb" secondAttribute="top" constant="20" id="D9S-c0-D62"/>
-                                                                <constraint firstItem="PXh-Rm-I7R" firstAttribute="leading" secondItem="0QC-df-xJS" secondAttribute="trailing" constant="156.66666666666666" id="LTa-lS-OBs"/>
+                                                                <constraint firstItem="PXh-Rm-I7R" firstAttribute="leading" secondItem="moD-2H-SCb" secondAttribute="leading" constant="54" id="LTa-lS-OBs"/>
                                                                 <constraint firstItem="Vyg-SE-Qj2" firstAttribute="leading" secondItem="moD-2H-SCb" secondAttribute="leading" constant="16" id="NRg-do-uly"/>
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Pb-jp-lXi" secondAttribute="trailing" constant="20" symbolic="YES" id="Nci-Cm-yUk"/>
                                                                 <constraint firstItem="2Pb-jp-lXi" firstAttribute="leading" secondItem="moD-2H-SCb" secondAttribute="leading" constant="54" id="Pgx-Vv-EUx"/>
                                                                 <constraint firstAttribute="bottom" secondItem="PXh-Rm-I7R" secondAttribute="bottom" constant="14" id="X0D-tu-6DV"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Ice-eM-cpd" secondAttribute="trailing" constant="7" id="ZYc-uY-2CL"/>
+                                                                <constraint firstItem="0QC-df-xJS" firstAttribute="leading" secondItem="moD-2H-SCb" secondAttribute="leading" constant="20" id="emO-nl-V8b"/>
                                                                 <constraint firstItem="2Pb-jp-lXi" firstAttribute="top" secondItem="moD-2H-SCb" secondAttribute="top" constant="20" id="gfA-1V-TT9"/>
                                                                 <constraint firstItem="Ice-eM-cpd" firstAttribute="bottom" secondItem="2Pb-jp-lXi" secondAttribute="bottom" id="jlh-Tc-YCD"/>
                                                                 <constraint firstAttribute="trailing" secondItem="PXh-Rm-I7R" secondAttribute="trailing" constant="20" id="nMY-5C-Y7u"/>
@@ -622,7 +623,7 @@
                                         </cells>
                                     </collectionView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xWE-QN-dj4">
-                                        <rect key="frame" x="77.666666666666515" y="335" width="220" height="73.666666666666686"/>
+                                        <rect key="frame" x="77.666666666666686" y="335" width="220" height="73.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26,000 people" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-g9-eIx">
                                                 <rect key="frame" x="0.0" y="0.0" width="203" height="36"/>
@@ -652,7 +653,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="E9N-L1-acV">
-                                        <rect key="frame" x="17.666666666666515" y="430" width="339.66666666666674" height="44"/>
+                                        <rect key="frame" x="17.666666666666657" y="430" width="339.66666666666674" height="44"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-Apple" translatesAutoresizingMaskIntoConstraints="NO" id="oVk-AM-RIC">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="44"/>
@@ -707,6 +708,7 @@
         <image name="Quote-Begin" width="23" height="18"/>
         <image name="Quote-End" width="12" height="9"/>
         <image name="Wave14" width="5120" height="2880"/>
+        <image name="avatar-chris-ching" width="400" height="400"/>
         <image name="ios11" width="2880" height="1600"/>
     </resources>
 </document>

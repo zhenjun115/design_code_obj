@@ -86,7 +86,7 @@
     cell.text.text = dataItem[@"text"];
     cell.name.text = dataItem[@"name"];
     cell.job.text = dataItem[@"job"];
-    cell.avator.image = [UIImage imageNamed: @"avatar"];
+    cell.avator.image = [UIImage imageNamed: dataItem[@"avatar"]];
     
     return cell;
 }
