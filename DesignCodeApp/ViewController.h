@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *chapterCollectionView;
 
 @property NSArray *dictArray;
+- (IBAction)closeBtnTappedHandle:(UIButton *)sender;
 
 @end
 

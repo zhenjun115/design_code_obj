@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Data.h"
 #import "SectionCollectionViewCell.h"
+#import "SectionViewController.h"
 
 @implementation ViewController
 
@@ -141,4 +142,23 @@
     return self.dictArray.count;
 }
 
+- (IBAction)closeBtnTappedHandle:(UIButton *)sender {
+    NSLog(@"xxx: 11234");
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"HomeToSection" sender: indexPath];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqual: @"HomeToSection"] ) {
+        SectionViewController *destCont = [segue destinationViewController];
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        // NSDictionary *section = (NSDictionary*)self.dictArray[ indexPath.row ];
+        destCont.section = (NSDictionary*)self.dictArray[ indexPath.row ];
+        destCont.indexPath = indexPath;
+        
+        NSLog( @"跳转之前准备!!" );
+    }
+}
 @end
