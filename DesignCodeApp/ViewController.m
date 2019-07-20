@@ -64,6 +64,7 @@
     [avPlayer play];
     NSLog( @"%@", url );
 }
+
 - (IBAction)handleTouch:(id)sender {
     // NSLog( @"play button tapped!!" );
     NSString *url = @"https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175";
